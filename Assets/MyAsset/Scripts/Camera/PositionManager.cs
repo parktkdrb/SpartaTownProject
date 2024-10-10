@@ -8,10 +8,12 @@ public class PositionManager : MonoBehaviour
     [SerializeField] private GameObject camara;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject nameUI;
+    private UIManager manager;
     // Start is called before the first frame update
     void Start()
     {
-        nameUI.GetComponentInChildren<TextMeshProUGUI>().text = GameManager.Instance.name;
+        manager = GameObject.Find("UI").gameObject.GetComponent<UIManager>();
+        nameUI = manager.nameTxtCanvas.gameObject;
     }
 
     // Update is called once per frame
