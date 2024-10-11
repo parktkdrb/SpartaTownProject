@@ -36,8 +36,11 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - playerListUI
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: playerListUI
+    uniqueID: 2851983267
     locked: 0

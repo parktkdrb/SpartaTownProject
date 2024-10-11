@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public PlayerListManager playerList;
     [SerializeField] public string name { get; set;}
     [SerializeField] public string spritename;
 
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this);
         }
+        playerList = GetComponent<PlayerListManager>();
     }
 
 }
