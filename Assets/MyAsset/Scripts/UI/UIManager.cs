@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject ChangenameCanvas;
     [SerializeField] private GameObject attendanceCanvas;
     [SerializeField] public TextMeshProUGUI nameText;
+
     public void InputCanvasOpen()
     {
         inputCanvas.SetActive(true);
