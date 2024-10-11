@@ -4,9 +4,13 @@ using UnityEngine.UI;
 
 public class ChoiceButton : ButtonManager
 {
-
     public void ChangeButton()
     {
-        JoinButton(this.gameObject);
+        ChangeButton(this.gameObject);
+    }
+    public void NameChange()
+    {
+        UIManager uiManager = gameObject.transform.root.GetComponent<UIManager>();
+        uiManager.nameText.text = GameManager.Instance.name;
     }
 }

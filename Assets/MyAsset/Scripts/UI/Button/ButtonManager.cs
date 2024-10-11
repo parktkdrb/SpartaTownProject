@@ -1,14 +1,29 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
-    public void JoinButton(GameObject _gameObject)
+    private PlayerListManager playerListManager;
+    private void Start()
     {
-        InputField inputfield =_gameObject.GetComponentInParent<InputField>();
-        Debug.Log(inputfield.name);
-        GameManager.Instance.name = inputfield.text;
+        playerListManager = GameObject.Find("GameManager").GetComponent<PlayerListManager>();
+    }
+    public virtual void ChangeButton(GameObject _gameObject)
+    {
+        InputField inputfield = _gameObject.GetComponentInParent<InputField>();
+        string newName = inputfield.text;
+
+        if (!string.IsNullOrEmpty(newName))
+        {
+            GameManager.Instance.name = newName;
+            playerListManager.AddPlayer(newName);
+            inputfield.gameObject.SetActive(false);
+        }
+    }
+    public void JoinButton()
+    {
         SceneManager.LoadScene("MainScene");
     }
 }
