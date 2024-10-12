@@ -16,4 +16,8 @@ public class UIManager : MonoBehaviour
     {
         inputCanvas.SetActive(true);
     }
+    public void CharaverChangeCanvasOpen()
+    {
+        ChangecharacterCanvas.SetActive(true);
+    }
 }

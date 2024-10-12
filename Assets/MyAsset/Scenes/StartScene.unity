@@ -670,7 +670,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 504271393}
         m_TargetAssemblyTypeName: CharacterChange, Assembly-CSharp
-        m_MethodName: CharacterChangeButton
+        m_MethodName: StartChangeButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1935,7 +1935,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2140245069}
         m_TargetAssemblyTypeName: CharacterChange, Assembly-CSharp
-        m_MethodName: CharacterChangeButton
+        m_MethodName: StartChangeButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
