@@ -37,7 +37,7 @@ public class CanvasSetActive : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         Debug.Log("충돌처리");
-        if (collision.CompareTag("Player") && isQuestionCanvasActive && collision.gameObject != managerPlayer)
+        if (collision.CompareTag("Player") && isQuestionCanvasActive)
         {
             questionCanvas.SetActive(false);
             isQuestionCanvasActive = false;
